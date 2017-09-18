@@ -8,10 +8,10 @@ using namespace std;
 #define maxWeightOfSingleItem 5
 #define maxBenefitOfSingleItem 20
 
-#define totalGenerations 15
-#define knapsackTotalWeight 20
+#define totalGenerations 39
+#define knapsackTotalWeight 30
 
-#define totalNumberOfItems 10
+#define totalNumberOfItems 20
 #define populationSize 5
 
 int temp[totalNumberOfItems+10]; //used in initVector
@@ -44,6 +44,19 @@ void printBenifitAndWeight(){
     }  
     cout<<endl;
     cout<<"Weight: ";
+    for(int i=0; i<totalNumberOfItems; i++){
+        cout<<weight[i]<<" ";
+    }
+    cout<<endl;
+}
+
+void printInputForDp(){
+    cout<<knapsackTotalWeight<<endl;
+    cout<<totalNumberOfItems<<endl;
+    for(int i=0; i<totalNumberOfItems; i++){
+        cout<<benefit[i]<<" ";
+    }  
+    cout<<endl;
     for(int i=0; i<totalNumberOfItems; i++){
         cout<<weight[i]<<" ";
     }
@@ -99,8 +112,12 @@ void printCurrentPopulation(){
 
 void printTrailCurrentPopulation(){
     for(int i=0; i<populationSize; i++){
+        int totalBenefit=0;
+        int totalWeight=0;
         for(int j=0; j<totalNumberOfItems; j++){
             cout<<trialCurrentPopulation[i][j]<<" ";
+            // totalBenefit += trialCurrentPopulation[i][j]*benefit[j];
+
         }
         cout<<endl;
     }
@@ -209,8 +226,8 @@ void selection(){
         tempWeight = 0;        
         
         for(int j=0; j<totalNumberOfItems; j++){
-            tempBenefit += (trialCurrentPopulation[i][j] * benefit[i]);
-            tempWeight += (trialCurrentPopulation[i][j] * weight[i]);
+            tempBenefit += (trialCurrentPopulation[i][j] * benefit[j]);
+            tempWeight += (trialCurrentPopulation[i][j] * weight[j]);
         }
         trialCurrentBenifit[i] = tempBenefit;
         trialSumOfWeight[i] = tempWeight;
@@ -236,7 +253,7 @@ void calculateTotalFitness(){
     cout<<"=======================================>Total Fitness = "<<totalFitness<<"\n";
 }
 int main(){
-    FILE *fin = freopen("ouput.txt", "w", stdout);
+    FILE *fin1 = freopen("ouputByDE.txt", "w", stdout);
     cout<<"Knapsack Problem using Differential Evoluation\n\n";
     
     cout<<"mutationFactor = "<<mutationFactor;
@@ -256,6 +273,12 @@ int main(){
     
 
     assignBenifitAndWeight();
+    
+    FILE *fin2 = freopen("inputForDP.txt", "w", stdout);
+    printInputForDp();
+
+    fin1 = freopen("ouputByDE.txt", "a+", stdout);
+    
     printBenifitAndWeight();
     initPopulation();
     cout<<"**************************************************************\n";

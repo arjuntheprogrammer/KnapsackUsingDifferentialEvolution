@@ -1,0 +1,955 @@
+Knapsack Problem using Differential Evoluation
+
+mutationFactor = 0.8, crossoverRate = 0.5
+maxWeightOfSingleItem = 5, maxBenefitOfSingleItem = 20
+totalGenerations = 39, knapsackTotalWeight = 30
+totalNumberOfItems = 20, populationSize = 5
+
+Benefit: 4 18 14 7 10 3 11 4 1 13 12 8 3 3 8 10 3 10 14 12 
+Weight: 2 1 1 3 2 3 5 2 2 2 4 5 1 4 1 3 4 3 2 3 
+**************************************************************
+
+Current Population: 
+1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 1 , SumOfWeight = 23, CurrentBenifit = 84
+1 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 0 1 0 , SumOfWeight = 29, CurrentBenifit = 85
+1 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 1 , SumOfWeight = 15, CurrentBenifit = 52
+1 0 0 0 1 1 1 0 1 0 0 0 1 0 0 1 1 1 0 1 , SumOfWeight = 28, CurrentBenifit = 67
+1 0 0 0 1 0 1 0 0 0 0 0 1 0 1 1 1 1 1 0 , SumOfWeight = 23, CurrentBenifit = 73
+=======================================>Total Fitness = 361
+**************************************************************
+Current Generation=0
+
+After Mutation, Population: 
+1 1 0 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 1 
+1 0 0 0 1 0 1 0 0 0 0 0 1 0 1 1 1 1 1 1 
+1 0 0 1 1 0 0 0 0 1 0 1 1 1 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 0 0 
+1 0 1 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 
+
+After Crossover, Population: 
+1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 
+1 0 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 
+0 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 1 0 0 0 
+1 0 1 1 1 1 1 0 0 0 0 0 1 0 1 1 1 0 1 0 
+
+After Selection, Population: 
+1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 1 , SumOfWeight = 23, CurrentBenifit = 84
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 , SumOfWeight = 23, CurrentBenifit = 86
+1 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 1 , SumOfWeight = 15, CurrentBenifit = 52
+1 0 0 0 1 1 1 0 1 0 0 0 1 0 0 1 1 1 0 1 , SumOfWeight = 28, CurrentBenifit = 67
+1 0 1 1 1 1 1 0 0 0 0 0 1 0 1 1 1 0 1 0 , SumOfWeight = 27, CurrentBenifit = 87
+=======================================>Total Fitness = 376
+**************************************************************
+Current Generation=1
+
+After Mutation, Population: 
+1 0 0 1 0 0 1 1 0 1 0 0 0 0 1 0 0 1 1 0 
+1 0 0 0 0 1 1 0 1 0 0 0 1 0 1 1 0 1 0 1 
+1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 0 
+1 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 1 1 
+1 1 1 0 1 0 1 1 0 1 1 0 0 0 1 0 0 0 0 1 
+
+After Crossover, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 
+1 1 0 0 0 1 1 0 0 0 0 0 1 0 1 1 1 1 1 0 
+1 1 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 1 
+1 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 1 0 1 
+1 1 1 1 1 0 1 1 0 0 0 0 0 0 1 0 1 0 0 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 , SumOfWeight = 23, CurrentBenifit = 86
+1 1 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 1 , SumOfWeight = 24, CurrentBenifit = 92
+1 0 0 0 1 1 1 0 1 0 0 0 1 0 0 1 1 1 0 1 , SumOfWeight = 28, CurrentBenifit = 67
+1 1 1 1 1 0 1 1 0 0 0 0 0 0 1 0 1 0 0 1 , SumOfWeight = 24, CurrentBenifit = 91
+=======================================>Total Fitness = 424
+**************************************************************
+Current Generation=2
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 1 0 1 1 0 0 0 1 1 0 1 0 1 
+1 1 1 1 0 1 1 1 1 0 1 0 0 0 0 0 0 0 0 1 
+1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 0 1 0 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 
+0 1 1 0 0 1 1 1 0 1 0 1 0 0 0 1 0 1 1 1 
+
+After Crossover, Population: 
+1 0 0 1 0 0 1 0 0 0 1 1 0 0 0 1 0 0 1 0 
+1 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 
+1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 1 1 1 
+1 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1 0 1 0 1 
+0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0 0 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 , SumOfWeight = 23, CurrentBenifit = 86
+1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 1 1 1 , SumOfWeight = 27, CurrentBenifit = 105
+1 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1 0 1 0 1 , SumOfWeight = 24, CurrentBenifit = 80
+0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0 0 1 , SumOfWeight = 27, CurrentBenifit = 92
+=======================================>Total Fitness = 451
+**************************************************************
+Current Generation=3
+
+After Mutation, Population: 
+1 1 1 1 0 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 
+1 1 0 1 0 0 0 1 1 0 0 1 0 1 1 0 1 1 0 1 
+1 0 1 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 1 
+1 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 1 1 0 
+1 1 0 0 0 0 1 1 1 0 0 0 0 0 1 0 1 0 1 1 
+
+After Crossover, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 0 0 0 1 0 1 0 1 
+1 1 1 0 1 0 0 1 0 0 0 0 0 1 1 0 1 1 0 1 
+1 0 1 0 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0 1 
+1 1 0 1 0 0 1 0 1 0 0 0 0 0 0 1 1 1 0 1 
+0 1 1 0 0 1 1 1 1 0 0 0 0 0 1 0 1 0 1 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 , SumOfWeight = 23, CurrentBenifit = 86
+1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 1 1 1 , SumOfWeight = 27, CurrentBenifit = 105
+1 0 1 1 0 0 1 0 1 0 0 0 1 0 1 1 0 1 0 1 , SumOfWeight = 24, CurrentBenifit = 80
+0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 1 1 0 0 1 , SumOfWeight = 27, CurrentBenifit = 92
+=======================================>Total Fitness = 451
+**************************************************************
+Current Generation=4
+
+After Mutation, Population: 
+0 1 1 0 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 
+0 0 1 0 0 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0 
+1 0 0 0 1 1 1 0 0 1 1 0 1 0 0 1 0 1 1 0 
+1 0 1 1 0 0 0 1 1 0 1 0 0 0 1 0 0 1 1 0 
+1 0 1 1 0 0 0 0 1 1 1 0 1 0 1 1 0 1 0 1 
+
+After Crossover, Population: 
+0 0 1 1 0 1 1 1 0 0 0 0 0 0 1 1 0 0 0 0 
+0 0 0 0 0 0 1 0 1 1 1 0 1 0 1 1 1 1 1 0 
+1 1 0 1 0 1 0 1 0 1 0 0 1 1 1 1 0 0 1 0 
+1 0 1 1 0 0 1 1 1 0 0 0 0 0 1 0 0 1 1 1 
+0 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 0 1 0 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 , SumOfWeight = 23, CurrentBenifit = 86
+1 1 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 1 1 1 , SumOfWeight = 27, CurrentBenifit = 105
+1 0 1 1 0 0 1 1 1 0 0 0 0 0 1 0 0 1 1 1 , SumOfWeight = 24, CurrentBenifit = 85
+0 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 0 1 0 1 , SumOfWeight = 21, CurrentBenifit = 104
+=======================================>Total Fitness = 468
+**************************************************************
+Current Generation=5
+
+After Mutation, Population: 
+1 1 0 0 0 0 1 1 1 0 0 0 1 0 0 1 1 1 1 0 
+1 1 1 1 0 0 1 1 0 1 0 0 0 0 1 1 1 0 1 1 
+1 0 1 0 0 0 0 1 1 1 1 0 1 0 0 1 1 0 1 1 
+0 0 1 1 0 0 1 0 1 1 0 0 0 0 1 1 1 1 1 1 
+1 1 1 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 1 
+
+After Crossover, Population: 
+1 1 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 1 1 0 
+1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1 0 1 0 
+1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 1 1 
+0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 
+0 1 1 1 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1 0 1 0 , SumOfWeight = 24, CurrentBenifit = 102
+1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 1 1 , SumOfWeight = 28, CurrentBenifit = 107
+0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 , SumOfWeight = 23, CurrentBenifit = 87
+0 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 0 1 0 1 , SumOfWeight = 21, CurrentBenifit = 104
+=======================================>Total Fitness = 488
+**************************************************************
+Current Generation=6
+
+After Mutation, Population: 
+0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 
+0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 0 1 
+0 0 1 1 0 0 1 0 1 0 1 0 0 0 1 1 0 1 0 1 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 0 
+0 1 1 1 0 0 1 0 1 0 0 0 1 0 1 1 1 1 0 0 
+
+After Crossover, Population: 
+0 0 1 1 0 0 0 1 1 0 1 0 0 0 1 1 0 0 0 1 
+0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 0 1 
+0 0 1 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 1 1 
+1 0 1 1 0 0 1 1 1 1 1 0 1 0 1 1 0 0 0 0 
+0 1 1 1 0 0 0 0 1 0 0 0 0 0 1 1 1 1 0 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 0 1 , SumOfWeight = 27, CurrentBenifit = 111
+1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 1 1 , SumOfWeight = 28, CurrentBenifit = 107
+0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 , SumOfWeight = 23, CurrentBenifit = 87
+0 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 0 1 0 1 , SumOfWeight = 21, CurrentBenifit = 104
+=======================================>Total Fitness = 497
+**************************************************************
+Current Generation=7
+
+After Mutation, Population: 
+0 0 1 0 1 1 0 1 0 1 1 0 1 0 1 1 1 0 0 1 
+0 1 1 1 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 
+1 1 1 0 0 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+0 1 1 0 0 0 1 0 0 1 0 0 0 0 1 1 1 1 0 1 
+1 1 1 1 0 0 0 1 1 0 1 0 1 0 1 1 1 0 1 1 
+
+After Crossover, Population: 
+0 0 1 0 0 1 0 1 1 1 1 0 1 0 1 1 1 0 0 1 
+0 1 1 1 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 1 
+1 1 1 0 0 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 0 1 
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 
+
+After Selection, Population: 
+1 0 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 , SumOfWeight = 24, CurrentBenifit = 88
+0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 0 1 , SumOfWeight = 27, CurrentBenifit = 111
+1 1 1 0 0 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 28, CurrentBenifit = 120
+0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 , SumOfWeight = 23, CurrentBenifit = 87
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 , SumOfWeight = 27, CurrentBenifit = 109
+=======================================>Total Fitness = 515
+**************************************************************
+Current Generation=8
+
+After Mutation, Population: 
+1 1 1 1 0 0 0 1 0 0 0 0 0 0 1 1 1 0 1 1 
+1 0 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 0 0 1 
+0 1 1 1 0 0 1 0 1 1 0 0 0 0 1 1 1 1 1 1 
+1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+1 1 1 0 0 0 0 1 0 1 0 0 1 0 1 1 1 1 0 1 
+
+After Crossover, Population: 
+0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 
+1 0 1 0 0 0 1 0 0 1 1 0 0 0 1 1 0 1 0 1 
+1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1 1 1 1 
+0 0 1 0 1 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1 
+1 1 1 0 0 0 0 1 0 0 0 0 1 0 1 1 1 0 0 1 
+
+After Selection, Population: 
+0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 , SumOfWeight = 22, CurrentBenifit = 94
+0 1 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 0 1 , SumOfWeight = 27, CurrentBenifit = 111
+1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 124
+0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 , SumOfWeight = 23, CurrentBenifit = 87
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 , SumOfWeight = 27, CurrentBenifit = 109
+=======================================>Total Fitness = 525
+**************************************************************
+Current Generation=9
+
+After Mutation, Population: 
+1 0 1 1 0 0 1 1 1 0 0 1 1 0 1 1 0 1 0 0 
+1 1 1 0 1 0 1 1 1 0 1 0 1 0 1 1 0 0 1 1 
+0 0 1 0 1 1 1 0 1 0 0 0 1 0 0 1 0 1 1 1 
+1 1 1 1 0 0 1 1 0 1 0 0 1 0 1 1 1 0 0 1 
+1 0 1 1 1 0 1 0 0 1 0 0 1 1 1 1 1 0 1 0 
+
+After Crossover, Population: 
+0 1 1 1 0 1 1 1 1 0 0 0 1 0 1 1 1 1 0 0 
+0 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 1 0 1 1 1 
+1 1 1 1 0 0 1 1 1 1 0 0 1 0 1 1 1 0 0 1 
+1 0 1 1 1 0 1 1 0 0 1 0 1 0 1 1 1 0 1 0 
+
+After Selection, Population: 
+0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 , SumOfWeight = 22, CurrentBenifit = 94
+0 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 , SumOfWeight = 25, CurrentBenifit = 125
+1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 124
+1 1 1 1 0 0 1 1 1 1 0 0 1 0 1 1 1 0 0 1 , SumOfWeight = 30, CurrentBenifit = 108
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 , SumOfWeight = 27, CurrentBenifit = 109
+=======================================>Total Fitness = 560
+**************************************************************
+Current Generation=10
+
+After Mutation, Population: 
+1 1 1 1 0 0 0 1 1 0 0 0 1 0 1 1 1 0 0 1 
+0 1 1 0 0 1 1 1 0 0 0 1 1 0 1 1 1 0 1 0 
+0 0 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 1 1 1 
+1 1 1 0 0 0 0 1 0 0 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 0 0 1 1 0 1 1 1 0 0 0 1 1 0 0 0 
+
+After Crossover, Population: 
+1 1 1 1 1 1 0 1 1 0 0 0 1 0 0 1 1 0 1 1 
+0 1 1 0 1 1 1 0 0 0 0 0 1 0 1 1 0 0 1 1 
+0 1 1 1 0 0 0 0 1 0 1 0 0 0 1 1 1 1 1 1 
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 1 0 0 
+
+After Selection, Population: 
+1 1 1 1 1 1 0 1 1 0 0 0 1 0 0 1 1 0 1 1 , SumOfWeight = 29, CurrentBenifit = 103
+0 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 , SumOfWeight = 25, CurrentBenifit = 125
+1 1 1 1 0 0 1 0 0 1 0 0 0 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 124
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 25, CurrentBenifit = 110
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 , SumOfWeight = 27, CurrentBenifit = 109
+=======================================>Total Fitness = 571
+**************************************************************
+Current Generation=11
+
+After Mutation, Population: 
+0 1 1 0 1 0 1 1 0 1 1 0 1 0 1 1 0 0 1 1 
+1 0 0 0 0 0 1 0 0 1 0 1 1 0 1 1 0 1 0 0 
+1 1 1 0 1 1 0 1 1 0 0 0 1 0 0 1 1 0 1 1 
+0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 0 1 1 0 1 1 
+
+After Crossover, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+0 1 0 0 0 0 1 0 0 1 1 0 1 0 1 1 0 1 0 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+0 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 , SumOfWeight = 25, CurrentBenifit = 125
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 25, CurrentBenifit = 110
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 , SumOfWeight = 27, CurrentBenifit = 109
+=======================================>Total Fitness = 594
+**************************************************************
+Current Generation=12
+
+After Mutation, Population: 
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 
+0 1 0 0 1 0 0 0 1 0 1 1 0 1 0 0 1 1 0 0 
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 0 0 1 1 
+0 0 0 0 1 1 0 1 0 0 1 0 1 1 0 1 0 0 0 1 
+
+After Crossover, Population: 
+0 1 1 1 1 0 0 1 0 1 0 0 1 0 0 1 1 0 1 1 
+0 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 0 0 1 1 
+0 1 0 0 1 0 0 0 0 0 1 0 1 0 1 0 1 1 1 0 
+1 1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 1 0 1 1 
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+0 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 , SumOfWeight = 25, CurrentBenifit = 125
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 25, CurrentBenifit = 110
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 , SumOfWeight = 30, CurrentBenifit = 118
+=======================================>Total Fitness = 603
+**************************************************************
+Current Generation=13
+
+After Mutation, Population: 
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 0 1 0 1 1 1 0 1 0 1 1 0 0 1 1 0 
+1 1 1 1 1 1 0 0 0 1 0 0 1 0 0 1 1 1 1 1 
+0 0 1 1 0 1 0 0 1 0 1 0 0 0 0 0 0 1 1 0 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 1 1 0 1 0 0 0 1 1 0 0 0 0 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 0 0 0 1 1 1 0 1 0 0 1 0 1 1 1 1 
+1 1 1 1 1 0 0 0 0 1 0 0 1 0 0 1 1 0 1 1 
+0 1 1 1 1 1 0 1 0 0 1 0 1 0 0 0 0 1 1 0 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 0 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 25, CurrentBenifit = 110
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 , SumOfWeight = 30, CurrentBenifit = 118
+=======================================>Total Fitness = 617
+**************************************************************
+Current Generation=14
+
+After Mutation, Population: 
+0 1 1 1 1 0 0 0 0 0 0 0 1 0 1 1 1 0 1 1 
+1 1 0 1 0 1 0 0 1 0 0 1 0 0 0 1 1 0 0 1 
+1 1 1 0 1 0 0 0 1 0 0 1 1 0 1 0 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 0 1 0 1 1 1 1 1 0 0 0 0 0 1 0 1 0 1 1 
+
+After Crossover, Population: 
+0 1 1 1 1 1 0 0 0 0 0 0 1 0 1 1 1 0 1 1 
+1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 1 0 1 1 1 
+1 1 1 0 1 0 1 0 1 1 0 1 1 0 1 0 0 0 1 1 
+1 1 1 1 0 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+0 0 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 0 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 28, CurrentBenifit = 117
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 , SumOfWeight = 30, CurrentBenifit = 118
+=======================================>Total Fitness = 624
+**************************************************************
+Current Generation=15
+
+After Mutation, Population: 
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 
+1 1 1 0 0 0 1 1 0 1 0 0 1 0 0 1 1 0 1 1 
+0 1 0 1 0 0 0 0 1 1 0 1 0 1 1 0 0 1 0 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 
+1 1 1 1 0 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+
+After Crossover, Population: 
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 
+1 1 1 0 0 0 1 1 0 1 0 0 1 0 0 1 1 0 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 0 1 1 1 0 1 0 0 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+0 1 1 1 1 0 0 0 0 0 1 0 1 1 1 1 0 0 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 0 0 1 1 , SumOfWeight = 30, CurrentBenifit = 118
+=======================================>Total Fitness = 634
+**************************************************************
+Current Generation=16
+
+After Mutation, Population: 
+0 0 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 0 0 
+0 0 0 0 1 1 1 1 0 1 1 0 0 1 0 0 1 0 0 0 
+1 0 1 0 1 1 1 0 1 0 0 0 1 1 0 1 1 0 0 1 
+1 0 0 0 1 1 1 1 1 1 0 0 1 0 1 1 0 0 1 0 
+0 1 1 0 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 
+
+After Crossover, Population: 
+0 1 0 0 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 0 
+1 1 0 0 1 1 1 0 1 1 1 0 0 0 1 1 0 1 0 0 
+1 1 1 1 1 1 0 1 0 0 0 0 1 0 0 0 1 1 1 1 
+1 0 1 0 1 1 1 1 0 1 0 0 1 0 1 1 1 0 1 0 
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 639
+**************************************************************
+Current Generation=17
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+1 0 1 1 0 0 1 0 0 1 1 1 0 1 1 0 0 1 0 0 
+1 0 0 0 1 1 1 0 1 0 1 0 0 0 1 0 0 1 0 1 
+0 1 0 0 0 1 1 0 0 1 0 1 1 0 0 1 1 1 1 0 
+
+After Crossover, Population: 
+0 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1 0 1 1 1 
+0 1 1 1 1 0 0 1 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0 1 
+1 0 0 0 1 1 1 0 1 0 1 0 0 0 1 0 1 0 0 1 
+0 1 0 0 0 1 0 0 0 1 1 1 1 0 0 1 0 1 1 0 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 639
+**************************************************************
+Current Generation=18
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 1 1 1 
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+0 0 0 0 1 0 0 1 0 1 0 1 0 1 1 0 0 1 1 0 
+0 1 1 0 1 0 0 1 0 1 0 0 1 0 0 1 1 1 1 1 
+0 1 0 1 0 0 0 1 1 0 0 1 1 1 1 1 0 0 0 0 
+
+After Crossover, Population: 
+0 1 1 1 1 0 0 1 0 1 0 0 1 0 0 1 0 1 1 1 
+1 1 1 0 1 1 0 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 1 0 0 1 1 0 1 0 0 1 1 1 1 0 0 
+1 1 1 0 1 0 0 0 0 1 0 0 1 0 0 1 1 0 1 1 
+0 1 0 0 0 1 0 1 0 1 1 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 639
+**************************************************************
+Current Generation=19
+
+After Mutation, Population: 
+1 0 0 0 0 0 1 1 0 1 1 0 1 1 1 0 0 0 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 
+0 1 0 1 0 0 0 0 1 1 1 1 0 0 1 1 0 0 0 0 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+
+After Crossover, Population: 
+1 1 0 0 0 0 0 1 0 1 1 0 1 1 1 0 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 
+0 1 1 0 1 1 0 1 0 0 0 1 1 0 0 0 0 1 0 1 
+1 1 0 1 0 0 1 0 0 1 1 1 1 0 1 1 0 0 0 1 
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+
+After Selection, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 27, CurrentBenifit = 120
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 639
+**************************************************************
+Current Generation=20
+
+After Mutation, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+0 1 1 1 1 0 1 0 1 0 0 0 0 1 1 1 0 0 0 1 
+1 1 1 1 0 0 0 1 0 1 0 1 1 0 0 0 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 0 0 1 0 1 1 0 1 0 1 0 1 0 1 0 0 0 1 1 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 1 1 1 0 1 0 1 1 0 1 0 0 0 1 0 1 1 
+1 1 1 1 0 0 0 0 0 1 0 0 1 0 0 1 1 1 1 1 
+1 0 0 0 0 1 1 1 1 0 1 1 1 1 0 0 0 0 1 0 
+1 1 0 0 0 0 1 0 0 0 1 1 0 0 1 1 0 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 647
+**************************************************************
+Current Generation=21
+
+After Mutation, Population: 
+1 1 0 1 1 0 1 1 0 1 1 0 1 0 0 0 0 1 1 0 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 1 1 1 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 0 0 0 1 1 
+1 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 
+0 1 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 1 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 
+1 1 1 0 1 0 0 0 0 1 0 0 1 0 0 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 647
+**************************************************************
+Current Generation=22
+
+After Mutation, Population: 
+0 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 0 1 0 1 
+0 1 0 1 0 1 0 1 1 1 0 1 0 0 0 0 0 1 0 0 
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 
+0 0 0 1 0 1 1 1 1 0 0 1 0 0 0 0 1 0 0 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 
+
+After Crossover, Population: 
+0 0 0 0 0 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 
+1 1 0 0 0 0 1 1 1 1 1 1 1 0 0 1 0 1 0 0 
+0 1 0 1 0 1 1 0 0 0 0 0 0 0 1 1 0 1 1 0 
+0 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 
+1 1 1 1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 , SumOfWeight = 27, CurrentBenifit = 123
+=======================================>Total Fitness = 647
+**************************************************************
+Current Generation=23
+
+After Mutation, Population: 
+0 1 1 1 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 
+1 1 1 1 0 0 1 0 1 1 0 1 1 0 0 1 0 0 0 0 
+0 1 1 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 1 1 
+1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 0 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+
+After Crossover, Population: 
+0 1 1 1 1 0 1 1 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 0 0 0 0 1 0 1 1 0 0 1 1 0 0 1 0 0 1 
+1 1 1 0 1 0 0 1 0 1 1 0 1 0 0 1 0 1 1 1 
+0 1 1 0 1 1 1 1 1 0 1 0 0 0 1 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 651
+**************************************************************
+Current Generation=24
+
+After Mutation, Population: 
+1 0 1 1 1 0 1 1 0 1 1 0 1 0 0 0 0 1 0 1 
+0 0 0 0 0 1 0 1 1 0 0 1 1 0 1 0 1 0 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+1 0 1 0 0 0 0 1 0 1 1 0 0 1 1 0 0 0 1 0 
+0 1 0 1 1 0 1 0 0 1 1 1 0 0 1 1 1 0 0 0 
+
+After Crossover, Population: 
+1 0 1 1 1 0 1 1 0 1 1 0 1 0 0 0 0 0 0 1 
+1 1 0 0 1 1 1 0 1 0 0 1 1 0 1 0 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+1 0 1 1 1 0 0 0 0 1 1 0 1 0 1 0 1 0 1 1 
+0 1 1 1 0 0 1 0 1 0 0 1 1 0 0 0 1 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 651
+**************************************************************
+Current Generation=25
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+0 0 0 0 0 0 1 1 0 1 1 0 1 1 0 0 0 0 0 1 
+1 0 0 0 0 0 0 1 1 0 0 1 1 1 0 1 1 0 1 1 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+0 0 0 0 0 0 1 1 0 1 1 0 1 0 1 0 0 0 0 1 
+1 1 0 0 0 0 1 0 1 1 0 0 1 1 0 1 1 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 651
+**************************************************************
+Current Generation=26
+
+After Mutation, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 0 1 0 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=27
+
+After Mutation, Population: 
+0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 0 1 
+0 1 1 1 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+
+After Crossover, Population: 
+1 1 1 0 1 0 0 0 0 0 1 0 0 1 1 0 0 1 1 1 
+1 1 1 1 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+0 0 1 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 1 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=28
+
+After Mutation, Population: 
+1 0 1 1 1 1 1 0 0 1 1 0 0 0 0 1 1 0 0 0 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+
+After Crossover, Population: 
+1 0 1 1 1 0 1 0 0 1 1 0 1 0 0 1 1 0 0 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 
+0 0 1 0 0 1 0 1 1 1 1 1 1 0 0 1 0 0 1 0 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=29
+
+After Mutation, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+0 0 1 0 0 0 0 1 0 1 0 1 1 0 1 0 1 1 1 1 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+0 1 0 1 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=30
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+0 0 0 0 0 1 1 0 0 1 0 1 1 1 1 0 0 0 1 0 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 0 1 0 1 1 1 
+
+After Crossover, Population: 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 0 0 1 0 1 1 0 1 1 0 0 0 0 0 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=31
+
+After Mutation, Population: 
+0 0 0 0 1 0 1 1 1 0 0 1 1 0 1 0 0 0 0 0 
+0 1 0 1 1 0 0 1 0 0 1 0 0 0 1 0 0 1 1 0 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 0 0 1 0 1 1 0 1 0 1 0 0 0 1 0 0 0 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 
+
+After Crossover, Population: 
+0 1 1 1 1 0 1 0 1 0 1 0 1 0 1 0 0 0 0 1 
+1 1 0 1 1 0 0 0 0 1 1 0 1 0 1 0 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+1 1 1 0 0 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=32
+
+After Mutation, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+0 0 0 0 0 1 1 1 1 1 1 0 1 1 0 0 0 0 0 0 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 0 0 1 1 0 0 1 1 0 1 0 0 0 1 1 0 1 0 1 
+0 0 0 0 1 1 1 0 1 1 1 0 1 0 1 0 0 0 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=33
+
+After Mutation, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 0 0 1 1 1 0 1 0 0 0 1 1 1 1 0 0 1 0 1 
+0 1 1 1 0 0 1 1 1 0 0 0 1 0 0 0 1 1 0 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+
+After Crossover, Population: 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+1 1 0 1 1 1 0 0 0 1 0 1 1 0 1 0 0 1 0 1 
+0 1 1 1 1 0 1 1 0 1 0 0 1 0 0 0 1 0 0 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 , SumOfWeight = 30, CurrentBenifit = 127
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 , SumOfWeight = 26, CurrentBenifit = 127
+=======================================>Total Fitness = 660
+**************************************************************
+Current Generation=34
+
+After Mutation, Population: 
+0 1 1 1 1 0 1 1 0 1 0 0 0 1 0 0 0 0 1 0 
+1 1 1 1 0 0 1 1 0 0 0 0 1 1 0 0 0 1 0 0 
+1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 
+
+After Crossover, Population: 
+0 1 1 1 1 0 1 1 0 1 1 0 0 1 0 1 0 0 1 0 
+1 1 1 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 1 
+1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 0 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 , SumOfWeight = 29, CurrentBenifit = 128
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+=======================================>Total Fitness = 675
+**************************************************************
+Current Generation=35
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+0 0 0 1 0 1 1 0 1 1 1 0 1 1 1 1 0 0 0 0 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 1 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 1 
+
+After Crossover, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 0 0 0 1 0 
+1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 1 1 1 1 1 
+
+After Selection, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+=======================================>Total Fitness = 686
+**************************************************************
+Current Generation=36
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+0 1 1 1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 
+
+After Crossover, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 1 0 1 0 0 1 0 0 0 0 1 1 0 1 1 
+
+After Selection, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+=======================================>Total Fitness = 686
+**************************************************************
+Current Generation=37
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+
+After Crossover, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 , SumOfWeight = 30, CurrentBenifit = 130
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+=======================================>Total Fitness = 686
+**************************************************************
+Current Generation=38
+
+After Mutation, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+
+After Crossover, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 
+
+After Selection, Population: 
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+1 1 1 0 1 0 1 0 0 1 1 0 1 0 1 1 0 1 1 1 , SumOfWeight = 30, CurrentBenifit = 139
+=======================================>Total Fitness = 695
+**************************************************************
